@@ -10,8 +10,4 @@ def main(real:float):
     converter=float(dolar)*real
     return {"real":real,"dolar":dolar,"converter":round(converter, 2)}
 
-@app.get("/")
-def teste():
-    return "hello world"
-
 
