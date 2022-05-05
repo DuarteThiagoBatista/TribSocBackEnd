@@ -3,7 +3,7 @@ import requests
 
 app= FastAPI()
 
-@app.get('/converter/{real}')
+@app.get('/converter/{dolar}')
 def main(dolar:float):
     moeda= requests.get("https://economia.awesomeapi.com.br/last/USD-BRL")
     cotacao_dolar=moeda.json()["USDBRL"]["ask"]
