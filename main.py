@@ -20,7 +20,7 @@ def main(dolar:float):
     cotacao_dolar=round(float(moeda.json()["USDBRL"]["ask"]),2)
     converter=cotacao_dolar*dolar
     valor_IRRF=round(calculo_irrf(converter),2)
-    return {"dolar":cotacao_dolar,"convertido":"%.2f" % converter,"IRRF":valor_IRRF,"salario_liquido":"%.2f" %(converter-valor_IRRF)}
+    return {'valor_inserido':dolar,"dolar":cotacao_dolar,"convertido":"%.2f" % converter,"IRRF":valor_IRRF,"salario_liquido":"%.2f" %(converter-valor_IRRF)}
 
 def calculo_irrf(real):
     if real<= 1903.98:
