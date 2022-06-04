@@ -23,3 +23,9 @@ class EmpresaRepository():
         delete_empresa=delete(EmpresasModels).where(EmpresasModels.id==id)
         self.database.execute(delete_empresa)
         self.database.commit()
+    
+    def get_by_id(self,id):
+        query=select(EmpresasModels).where(EmpresasModels.id==id)
+        return self.database.execute(query).scalar()
+
+    
